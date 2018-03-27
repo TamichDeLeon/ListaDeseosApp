@@ -7,7 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { pendientesComponent } from '../pages/pendientes/pendientes.components';
 import { terminadosComponent } from '../pages/teminados/terminados.component';
-
+import { AgregarComponent } from '../pages/agregar/agregar.component';
 //Servicio
 import { ListaDeseosService } from '../app/services/lista-deseos.service';
 
@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     pendientesComponent,
     terminadosComponent,
+    AgregarComponent,
     TabsPage
   ],
   imports: [
@@ -30,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     pendientesComponent,
     terminadosComponent,
+    AgregarComponent,
     TabsPage
   ],
   providers: [
