@@ -8,24 +8,26 @@
 
     <ion-card *ngFor="let lista of _listaDeseos.lista">
 
-        <ion-item>
-          Boton!!!
+        <ion-item color="white">
+          <h2>{{ lista.nombre }}</h2>
+          <ion-note item-right >
+            {{ lista.items.length }} Items
+          </ion-note>
+
         </ion-item>
-        <h2>{{ lista.nombre}}</h2>
+
 
         <ion-list>
-            <ion-item>
-                <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
-                Datos
+            <ion-item *ngFor="let item of lista.items | slice:0:2">
+                <ion-icon *ngIf="!item.completado"ios="ios-square-outline" md="md-square-outline"></ion-icon>
+                <ion-icon *ngIf="item.completado"ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
+              {{ item.nombre}}
             </ion-item>
-            <ion-item>
-                <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
-                Datos
+
+            <ion-item class="text-center" *ngIf="lista.items.length > 2">
+              <ion-icon ios="ios-arrow-dropdown-outline" md="md-arrow-dropdown"></ion-icon>
             </ion-item>
-            <ion-item>
-                <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
-                Datos
-            </ion-item>
+
         </ion-list>
 
     </ion-card>
