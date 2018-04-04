@@ -28,11 +28,16 @@ export class ListaDeseosService {
      if (localStorage.getItem("data")) {
          this.lista = JSON.parse(localStorage.getItem("data"));
      }
-     
+
    }
 
    agregarLista(lista:Lista){
      this.lista.push(lista);
+     this.actualizarData();
+   }
+
+   eliminarLista(idx:number){
+     this.lista.splice(idx,1);
      this.actualizarData();
    }
 
