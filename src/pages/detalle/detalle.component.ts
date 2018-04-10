@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, AlertController} from 'ionic-angular';
 import { Lista, ListaItem } from '../../app/clases/index';
 import { ListaDeseosService } from '../../app/services/lista-deseos.service';
-import {Module} from 'path-to-source';
+
 
 @Component({
   selector: 'app-detalle',
@@ -42,8 +42,8 @@ export class DetalleComponent implements OnInit {
 
   borrarItem(){
     let confirm = this._alertCtrl.create({
-    title: 'Borrar Lista Items',
-    message: 'Desea Borrar la Lista de Deseos?',
+    title: 'Borrar Lista',
+    message: 'Desea Borrar la Lista '+this.lista.nombre+' idx '+this.idx+'?',
     buttons: [
           {
             text: 'Cancelar'
